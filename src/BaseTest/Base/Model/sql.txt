@@ -1,0 +1,35 @@
+
+CREATE TABLE `autoincrement` (
+  `ID` bigint(20) NOT NULL,
+  `CollectionName` varchar(45) DEFAULT NULL,
+  `FieldName` varchar(45) DEFAULT NULL,
+  `IncrementID` bigint(20) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `transaction` (
+  `ID` bigint(20) NOT NULL,
+  `SellerID` bigint(20) NOT NULL,
+  `BuyerID` bigint(20) NOT NULL,
+  `Amount` double NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `user` (
+  `ID` bigint(20) NOT NULL,
+  `Name` varchar(45) DEFAULT NULL,
+  `Amount_Sold` double DEFAULT NULL,
+  `Amount_Bought` double DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `updateapply` (
+  `ID` bigint(20) NOT NULL,
+  `TransID` bigint(20) NOT NULL,
+  `UserID` bigint(20) NOT NULL,
+  `Amount` double NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
